@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 3 - Umlah</title>
+</head>
+	
+
+<body>
+<p>
+Select a shape:<br>
+<select id="shape">
+	<option value="loop">line loop</option>
+	<option value="tri">triangles</option>
+	<option value="strip">line strip</option>
+	<option value="lines">lines</option>
+	<option value="tristrip">triangle strip</option>
+	<option value="trifan">triangle fan</option>
+</select>
+Transform: <input id="transform" type="text" value="0.0"> degrees
+</p>
+<p>
+<input type="button" id="scaleup" name="scale up" value="scale +">
+<input type="button" id="scaledown" name="scale down" value="scale -">
+</p>
+<p>
+<input type="button" id="move" name="move" value="move">
+
+<canvas id="webgl">
+	Please use a browser that supports canvas.
+</canvas>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/cuon-matrix.js"></script>
+	<script type="text/javascript" src="lib/cuon-utils.js"></script>
+	<script type="text/javascript" src="lib/webgl-debug.js"></script>
+	<script type="text/javascript" src="lib/webgl-utils.js"></script>
+	<script type="text/javascript" src="tri2_script.js"></script>
+</body>
+</html>
