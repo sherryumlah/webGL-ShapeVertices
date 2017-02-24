@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GAP - Week 1 - Sherry Umlah</title>
+  <style>
+  body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 1rem;
+  }
+  #R, #G, #B{
+    border:0;
+    font-size: 1rem;
+    
+  }
+  #left{
+    float: left;
+  }
+  #right{
+    float: right;
+  }
+  #point,#triangle, #colors{
+    float:left;
+    padding:2rem;
+  }
+  #canvas{
+   
+    padding:2rem;
+  }
+  .vslide{
+    -webkit-appearance: slider-vertical;
+  }
+  </style>
+</head>
+
+<body onload="main()">
+<div id="left">
+<div id="triangle">
+    <h1><a href="#" class="create">Create a Triangle</a></h1>
+    <p>
+      <strong>Bottom Left Vertex:</strong><br>
+      X: <input type="range" class="tripoint" min="-0.5" max="0.5" value="-0.5" step="0.10" id="p3x"> <br>
+      Y: <input type="range"  class="tripoint vslide"  id="p3y" min="-0.5" max="0.5" step="0.10" value="-0.5">
+      </p>
+      <p>
+      <strong>Peak Vertex:</strong><br>
+       X:<input type="range"  class="tripoint"  min="-0.5" max="0.5" step="0.10" value="0.0" id="p2x"> <br>
+      Y:<input type="range"  class="tripoint vslide"  id="p2y"    min="-0.5" max="0.5" step="0.10" value="0.0">
+      </p>
+      <p>
+      <strong>Bottom Right Vertex:</strong><br>
+      X:<input type="range"  class="tripoint"  min="-0.5" max="0.5" id="p1x" step="0.10" value="0.5"> <br>
+      Y:<input type="range"  class="tripoint vslide"  id="p1y"   min="-0.5" max="0.5" step="0.10" value="-0.5">
+    </p>
+    <p>
+      <strong>Move Triangle</strong><br>
+        X: <input type="number"  class="movex move"  
+        min="-0.5" max="0.5" id="movex" step="0.1" value="0.0">
+        Y: <input type="number"  class="movey move" 
+         min="-0.5" max="0.5" id="movey" step="0.1" value="0.0">
+
+      </p>
+      
+      <p><a href="#" class="animateTri">Animate Triangle</a></p>
+</div>
+
+<div id="right">
+<div id="point">
+
+<h1><a href="#" class="point">Create a Point</a></h1>
+<p>
+  <strong>Point Size:</strong> <input type="number" min="0.0" max="300" step="5" name="ptSize" value="10" id="ptSize">
+  </p>
+  </div>
+<div id="colors">
+ <p>
+     <strong>Hex Value:</strong>  <input type="color" class="color" name="favcolor" id="picked">
+   
+  </p>
+  <p>
+  <strong>RGB Value:</strong><br>
+     R:<input type="text" id="R" value="0.0" readonly> <br>
+     G:<input type="text" id="G" value="0.0" readonly> <br>
+     B:<input type="text" id="B" value="0.0"readonly>
+  </p>
+</div>
+
+
+<div id="canvas">
+  
+  <canvas id="webgl" width="400" height="400"> 
+  	Please use a browser that supports canvas.
+  </canvas>
+</div>
+</div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/webgl-utils.js"></script>
+  <script type="text/javascript" src="lib/webgl-debug.js"></script>
+  <script type="text/javascript" src="lib/cuon-utils.js"></script>
+  <script type="text/javascript" src="shapes.js"></script>
+
+
+</body>
+</html>
